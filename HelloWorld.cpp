@@ -9,11 +9,46 @@ template<typename number_t, typename index_t> number_t get_fibbonachi_number(ind
     return second_last_number;
 }
 
+void sortArray(int a[],int n){
+    for (int i =1;i<n;i++){
+
+        int j=i-1;
+        int key=a[i];
+
+        while(j>=0 && key<a[j]){
+            a[j+1]=a[j];
+            j--;
+
+
+        }
+        a[j+1]=key;
+    
+    }
+
+//7 5 3 4 10
+//
+
+}
+
+    void printArray(int a[],int n){
+
+        for(int i=0;i<n;i++){
+    
+        
+        printf("%d",a[i]);
+        printf("\n");
+
+        }
+}
+
 int main()
 {
-    //test SokovMM 
-    //test2gitg
-    //test3
+    int b[]={5,10,3,12,17};
+    printArray(b,5);
+    sortArray(b,5);
+        printArray(b,5);
+    
+
     std::cout << "Hello world!" << std::endl;
 
     const unsigned short fibbonachi_numbers_amount = 10;
